@@ -90,9 +90,45 @@ document.querySelectorAll(".nav a").forEach(a => a.addEventListener("click", () 
 
 const form = document.querySelector("#clientForm");
 const status = document.querySelector("#formStatus");
-form.addEventListener("submit", e => {
+
+const supabaseClient = window.supabase.createClient(
+  window.ALHO_ZANI_SUPABASE_URL,
+  window.ALHO_ZANI_SUPABASE_KEY
+);
+
+form.addEventListener("submit", async e => {
   e.preventDefault();
+  status.textContent = "Salvando seu cadastro...";
+  status.className = "form-status";
+
   const data = Object.fromEntries(new FormData(form).entries());
+  const cidadeEstado = (data.cidade || "").trim();
+  const estadoMatch = cidadeEstado.match(/[-–—]\s*([A-Za-z]{2})$/);
+  const estado = estadoMatch ? estadoMatch[1].toUpperCase() : "PR";
+  const cidade = cidadeEstado.replace(/[-–—]\s*[A-Za-z]{2}\s*$/, "").trim();
+
+  const payload = {
+    nome: data.nome?.trim(),
+    empresa: data.empresa?.trim() || null,
+    email: data.email?.trim().toLowerCase(),
+    telefone: data.telefone?.trim(),
+    whatsapp: data.telefone?.trim(),
+    cidade: cidade || null,
+    estado,
+    tipo_cliente: data.interesse || null,
+    mensagem: data.mensagem?.trim() || null,
+    status: "Novo"
+  };
+
+  const { error } = await supabaseClient.from("Clientes").insert(payload);
+
+  if (error) {
+    console.error("Erro ao cadastrar no Supabase:", error);
+    status.textContent = "Não foi possível salvar o cadastro agora. Tente novamente ou fale conosco pelo WhatsApp.";
+    status.className = "form-status error";
+    return;
+  }
+
   const text =
 `Olá, Alho Zani! Vim pelo site e gostaria de entrar em contato.
 
@@ -108,9 +144,13 @@ Mensagem: ${data.mensagem || "Gostaria de receber mais informações."}`;
     nome:data.nome, email:data.email, telefone:data.telefone, cidade:data.cidade,
     interesse:data.interesse, data:new Date().toISOString()
   }));
+
+  status.textContent = "Cadastro realizado com sucesso! Abrindo o WhatsApp...";
+  status.className = "form-status success";
   const url = "https://wa.me/5543999808756?text=" + encodeURIComponent(text);
-  status.textContent = "Cadastro preparado. Abrindo o WhatsApp...";
   window.open(url, "_blank", "noopener");
+  form.reset();
+  form.querySelector('[name="cidade"]').value = "Arapongas-PR";
 });
 
 document.querySelector("#modalContact").addEventListener("click", closeModal);

@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
   <header class="topbar">
@@ -218,7 +219,7 @@
           </div>
           <label>Mensagem<textarea name="mensagem" rows="4" maxlength="500" placeholder="Conte brevemente como podemos ajudar."></textarea></label>
           <label class="check"><input type="checkbox" required name="consentimento"> Autorizo o uso dos dados informados para retorno deste contato.</label>
-          <button class="btn btn-purple" type="submit">Preparar mensagem no WhatsApp</button>
+          <button class="btn btn-purple" type="submit">Cadastrar e falar pelo WhatsApp</button>
           <p id="formStatus" class="form-status" role="status"></p>
         </form>
       </div>
@@ -256,6 +257,7 @@
     </div>
   </div>
 
+  <script src="supabase-config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
