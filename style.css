@@ -1,0 +1,124 @@
+:root{
+  --purple:#7a1fa2;
+  --purple-dark:#4a1168;
+  --lilac:#ead7f3;
+  --pink:#e90072;
+  --pink-soft:#ff4b9b;
+  --gold:#f4bd25;
+  --gold-dark:#c99000;
+  --blue:#1f5ca8;
+  --ink:#28202c;
+  --muted:#6f6474;
+  --cream:#fffaf3;
+  --white:#fff;
+  --shadow:0 18px 50px rgba(64,24,83,.13);
+  --radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:#fff;font-family:Montserrat,Arial,sans-serif;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #eee}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;min-height:78px;gap:25px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;display:grid;place-items:center;font-family:"Baloo 2";font-size:22px;font-weight:800;box-shadow:0 8px 18px rgba(122,31,162,.22)}
+.brand strong{display:block;font-family:"Baloo 2";font-size:26px;line-height:1;color:var(--purple-dark)}
+.brand small{display:block;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.2px}
+.nav{display:flex;align-items:center;gap:19px;font-size:13px;font-weight:700}
+.nav a{text-decoration:none}
+.nav a:hover{color:var(--pink)}
+.nav-cta{padding:10px 16px;border-radius:99px;background:var(--purple);color:#fff!important}
+.menu-toggle{display:none;border:0;background:transparent;font-size:28px;color:var(--purple)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#531072 0%,#7a1fa2 48%,#b30c70 100%);color:#fff;padding:80px 0}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(244,189,37,.16);filter:blur(2px)}
+.hero:before{width:330px;height:330px;right:-80px;top:-120px}
+.hero:after{width:260px;height:260px;left:-130px;bottom:-150px}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:2.3px;font-weight:800;color:#fff;opacity:.9}
+.eyebrow.purple{color:var(--purple)}
+.eyebrow.gold{color:var(--gold-dark)}
+.hero h1{font-family:"Baloo 2";font-size:clamp(45px,6vw,78px);line-height:.98;margin:16px 0 22px}
+.hero h1 span{color:#ffd452}
+.hero-copy>p{font-size:18px;max-width:670px;color:#f9efff}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+.btn{display:inline-flex;justify-content:center;align-items:center;border:0;border-radius:999px;padding:13px 20px;font:800 13px Montserrat;text-decoration:none;cursor:pointer;transition:.2s transform,.2s box-shadow}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,.14)}
+.btn-gold{background:var(--gold);color:#3e2a00}
+.btn-light{background:#fff;color:var(--purple-dark)}
+.btn-purple{background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;font-size:11px;font-weight:700}
+.hero-badges span{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.18);padding:7px 10px;border-radius:99px}
+.hero-card{background:#fff;border-radius:30px;padding:12px;box-shadow:0 25px 60px rgba(26,0,37,.3);transform:rotate(1deg)}
+.hero-card img{width:100%;height:420px;object-fit:cover;border-radius:22px}
+.hero-card-caption{padding:17px 12px 10px;color:var(--ink)}
+.hero-card-caption strong,.hero-card-caption span{display:block}
+.hero-card-caption strong{font-size:16px}.hero-card-caption span{font-size:12px;color:var(--muted)}
+.brands-strip{background:linear-gradient(90deg,var(--pink),var(--purple));color:#fff}
+.brands{display:flex;align-items:center;justify-content:center;gap:17px;min-height:58px;flex-wrap:wrap;font-size:12px}
+.brands span{opacity:.8}.brands b{font-family:"Baloo 2";font-size:18px}.brands i{opacity:.6}
+.section{padding:90px 0}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.about-image{position:relative}
+.about-image img{height:500px;width:100%;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}
+.floating-note{position:absolute;right:-25px;bottom:25px;background:#fff;padding:17px 20px;border-radius:18px;box-shadow:var(--shadow);max-width:260px;border-left:5px solid var(--gold)}
+.floating-note strong,.floating-note span{display:block}.floating-note strong{color:var(--purple)}.floating-note span{font-size:12px;color:var(--muted)}
+h2{font-family:"Baloo 2";font-size:clamp(36px,4.5vw,54px);line-height:1.05;margin:10px 0 18px;color:var(--purple-dark)}
+.section-copy>p{color:var(--muted)}
+.contact-mini{display:grid;gap:14px;margin-top:28px}
+.contact-mini>div{display:flex;gap:12px;align-items:flex-start;background:#fbf6ff;padding:12px 15px;border-radius:15px}
+.contact-mini span{font-size:21px}.contact-mini p{margin:0;font-size:12px}.contact-mini a{color:var(--purple)}
+.section-products{background:var(--cream)}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:35px}
+.section-heading>div:first-child{max-width:690px}.section-heading p{color:var(--muted);margin-bottom:0}
+.section-heading.center{display:block;text-align:center;max-width:760px;margin:0 auto 35px}
+.catalog-tools{display:flex;gap:9px;flex-wrap:wrap}
+.catalog-tools input,.catalog-tools select,.client-form input,.client-form select,.client-form textarea{border:1px solid #ddd3e2;background:#fff;border-radius:13px;padding:12px 14px;font:500 13px Montserrat;outline:none}
+.catalog-tools input:focus,.catalog-tools select:focus,.client-form input:focus,.client-form select:focus,.client-form textarea:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(122,31,162,.09)}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 25px rgba(62,30,76,.08);transition:.2s transform,.2s box-shadow;display:flex;flex-direction:column}
+.product-card:hover{transform:translateY(-5px);box-shadow:0 18px 35px rgba(62,30,76,.14)}
+.product-photo{height:190px;background:#f4eafa;display:grid;place-items:center;overflow:hidden}
+.product-photo img{width:100%;height:100%;object-fit:cover}
+.product-body{padding:17px;display:flex;flex-direction:column;flex:1}
+.tag{display:inline-flex;align-self:flex-start;background:#f2d9ff;color:var(--purple);padding:4px 8px;border-radius:99px;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.7px}
+.product-body h3{font-family:"Baloo 2";font-size:21px;line-height:1.1;margin:10px 0 8px;color:var(--purple-dark)}
+.product-body p{font-size:11px;color:var(--muted);margin:0 0 15px}
+.product-link{margin-top:auto;border:0;background:transparent;color:var(--pink);font:800 11px Montserrat;text-align:left;cursor:pointer;padding:0}
+.empty-state{text-align:center;color:var(--muted);padding:30px}
+.health{background:linear-gradient(145deg,#f7effb,#fff)}
+.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.benefit-card{background:#fff;border:1px solid #eadff0;border-radius:20px;padding:25px;box-shadow:0 8px 22px rgba(68,35,79,.06)}
+.benefit-card>span{font-size:31px}.benefit-card h3{font-family:"Baloo 2";font-size:23px;margin:10px 0 5px;color:var(--purple-dark)}.benefit-card p{font-size:12px;color:var(--muted);margin:0}
+.health-note{margin-top:22px;padding:14px 18px;border-radius:15px;background:#fff5cf;color:#604b00;font-size:11px;border-left:5px solid var(--gold)}
+.curiosity-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.curiosity-photo{height:460px;width:100%;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}
+.accordion{margin-top:25px}
+.accordion-btn{width:100%;display:flex;justify-content:space-between;align-items:center;border:0;border-bottom:1px solid #eadff0;background:#fff;text-align:left;padding:18px 2px;font:800 14px Montserrat;color:var(--purple-dark);cursor:pointer}
+.accordion-content{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.accordion-content p{font-size:12px;color:var(--muted);padding:0 5px 15px;margin:0}
+.accordion-btn.active{color:var(--pink)}
+.recipes{background:#f9f8ff}
+.recipe-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.recipe-card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 10px 25px rgba(52,37,72,.08)}
+.recipe-card img{height:210px;width:100%;object-fit:cover}
+.recipe-card div{padding:16px}.recipe-card h3{font-family:"Baloo 2";font-size:23px;margin:0;color:var(--purple-dark)}.recipe-card p{font-size:11px;color:var(--muted);margin:3px 0 0}
+.photo-credit{display:block;color:#8a8190;text-align:center;margin-top:18px}
+.contact-section{background:linear-gradient(130deg,#4b1266,#7a1fa2 55%,#b3096d);color:#fff}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:start}
+.contact-copy h2{color:#fff}.contact-copy>p{color:#f2e6f6}
+.contact-highlight{margin:25px 0;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:18px;border-radius:18px}.contact-highlight strong,.contact-highlight span{display:block}.contact-highlight strong{font-size:25px}.contact-highlight span{font-size:11px;opacity:.8}
+.client-form{background:#fff;color:var(--ink);padding:28px;border-radius:25px;box-shadow:0 25px 60px rgba(26,0,37,.25)}
+.client-form label{display:block;font-size:11px;font-weight:800;margin-bottom:13px}.client-form input,.client-form select,.client-form textarea{width:100%;margin-top:6px}.client-form textarea{resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.check{display:flex!important;align-items:flex-start;gap:8px;font-weight:500!important;color:var(--muted)}.check input{width:auto!important;margin-top:2px}
+.form-status{font-size:11px;margin:12px 0 0;color:var(--purple)}
+footer{background:#25132d;color:#e9deed;padding-top:42px}
+.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:35px;padding-bottom:30px}.footer-grid strong{color:#fff}.footer-grid p{font-size:11px;color:#cdbed2}.footer-grid a{color:#f6ca46;text-decoration:none}.footer-brand{display:flex;align-items:center;gap:10px;color:#fff;font-family:"Baloo 2";font-size:25px}.footer-bottom{border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:17px;font-size:10px;color:#a999ad}
+.modal{position:fixed;inset:0;background:rgba(20,5,27,.7);z-index:100;display:none;place-items:center;padding:20px}
+.modal.show{display:grid}.modal-box{position:relative;background:#fff;border-radius:25px;overflow:hidden;width:min(720px,95vw);display:grid;grid-template-columns:.85fr 1.15fr;box-shadow:0 30px 80px rgba(0,0,0,.3)}
+.modal-box>img{height:100%;min-height:330px;width:100%;object-fit:cover}.modal-body{padding:35px}.modal-body h2{font-size:38px}.modal-body p{font-size:13px;color:var(--muted)}.modal-close{position:absolute;right:12px;top:10px;border:0;background:#fff;border-radius:50%;width:36px;height:36px;font-size:25px;cursor:pointer;z-index:2;color:var(--purple)}
+@media(max-width:1050px){.nav{gap:10px}.product-grid,.benefit-grid,.recipe-grid{grid-template-columns:repeat(2,1fr)}.hero-grid,.about-grid,.curiosity-grid,.contact-grid{grid-template-columns:1fr}.hero-card{max-width:650px;margin:auto}.about-image{max-width:700px}.section-heading{align-items:start;flex-direction:column}}
+@media(max-width:780px){.nav{display:none;position:absolute;left:0;right:0;top:78px;background:#fff;padding:15px 4%;box-shadow:0 15px 30px rgba(0,0,0,.08);flex-direction:column;align-items:stretch}.nav.open{display:flex}.nav a{padding:8px}.menu-toggle{display:block}.hero{padding:60px 0}.hero-card img{height:320px}.section{padding:65px 0}.product-grid,.benefit-grid,.recipe-grid{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.modal-box{grid-template-columns:1fr}.modal-box>img{min-height:240px;max-height:300px}}
+@media(max-width:520px){.brand small{display:none}.brand strong{font-size:23px}.product-grid,.benefit-grid,.recipe-grid,.footer-grid{grid-template-columns:1fr}.hero h1{font-size:47px}.hero-actions .btn{width:100%}.floating-note{position:relative;right:auto;bottom:auto;margin:-30px 15px 0}.hero-card{transform:none}.catalog-tools{width:100%}.catalog-tools input,.catalog-tools select{width:100%}}

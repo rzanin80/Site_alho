@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alho Zani — produtos derivados do alho, Alho Maringá, Alho Zani e Alho Arapongas. Arapongas-PR.">
+  <meta name="theme-color" content="#7a1fa2">
+  <title>Alho Zani | Alho Maringá • Alho Zani • Alho Arapongas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Alho Zani - início">
+        <span class="brand-mark">AZ</span>
+        <span>
+          <strong>Alho Zani</strong>
+          <small>Alho Maringá • Alho Zani • Alho Arapongas</small>
+        </span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#curiosidades">Curiosidades</a>
+        <a href="#receitas">Receitas</a>
+        <a class="nav-cta" href="#cadastro">Seja cliente</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">ARAPONGAS • PARANÁ</span>
+          <h1>O sabor do alho que <span>valoriza sua receita.</span></h1>
+          <p>Produtos derivados do alho para o dia a dia, com as marcas <strong>Alho Maringá, Alho Zani e Alho Arapongas</strong>.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#produtos">Conheça os produtos</a>
+            <a class="btn btn-light" href="https://wa.me/5543999808756?text=Ol%C3%A1%2C%20vim%20pelo%20site%20Alho%20Zani%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+          </div>
+          <div class="hero-badges">
+            <span>✓ Atendimento regional</span>
+            <span>✓ Linha variada</span>
+            <span>✓ Produtos para varejo</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/hero-produtos.jpg" alt="Exposição de produtos de alho Alho Zani e Alho Maringá">
+          <div class="hero-card-caption">
+            <strong>Uma linha para diferentes necessidades</strong>
+            <span>Do alho em cartela ao alho triturado e temperos.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands-strip">
+      <div class="container brands">
+        <span>Marcas representadas</span>
+        <b>Alho Maringá</b>
+        <i>•</i>
+        <b>Alho Zani</b>
+        <i>•</i>
+        <b>Alho Arapongas</b>
+      </div>
+    </section>
+
+    <section id="empresa" class="section">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="assets/ponto-venda.jpg" alt="Produtos de alho expostos em ponto de venda">
+          <div class="floating-note">
+            <strong>Desde Arapongas-PR</strong>
+            <span>Atuação em diferentes regiões do Paraná.</span>
+          </div>
+        </div>
+        <div class="section-copy">
+          <span class="eyebrow purple">SOBRE A ALHO ZANI</span>
+          <h2>Praticidade, sabor e variedade para sua cozinha.</h2>
+          <p>A <strong>Alho Zani</strong> atua em Arapongas-PR com a comercialização de produtos derivados do alho, representando as linhas <strong>Alho Maringá, Alho Zani e Alho Arapongas</strong>.</p>
+          <p>A proposta é oferecer opções práticas para consumidores, mercados, comércios e clientes que buscam alho em diferentes apresentações e temperos para o preparo de alimentos.</p>
+          <div class="contact-mini">
+            <div><span>📍</span><p><strong>Endereço</strong><br>Rua Realejo, nº 302 — Conjunto Centauro<br>Arapongas-PR • 86709-230</p></div>
+            <div><span>☎</span><p><strong>Telefone</strong><br>(43) 99980-8756</p></div>
+            <div><span>✉</span><p><strong>E-mail</strong><br><a href="mailto:alho_arapongas@hotmail.com">alho_arapongas@hotmail.com</a></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="produtos" class="section section-products">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow purple">NOSSA LINHA</span>
+            <h2>Produtos comercializados</h2>
+            <p>Confira as principais apresentações disponíveis. As fotos abaixo são registros fornecidos pela empresa e funcionam como referência visual.</p>
+          </div>
+          <div class="catalog-tools">
+            <input id="productSearch" type="search" placeholder="Buscar produto..." aria-label="Buscar produto">
+            <select id="productFilter" aria-label="Filtrar produtos">
+              <option value="todos">Todos</option>
+              <option value="alho">Alho</option>
+              <option value="temperos">Temperos</option>
+            </select>
+          </div>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+        <p id="emptyProducts" class="empty-state" hidden>Nenhum produto encontrado.</p>
+      </div>
+    </section>
+
+    <section id="beneficios" class="section health">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="eyebrow gold">ALHO NA ALIMENTAÇÃO</span>
+          <h2>Benefícios e cuidados</h2>
+          <p>O alho é um alimento tradicionalmente utilizado na culinária e contém compostos sulfurados, além de micronutrientes.</p>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit-card"><span>🧄</span><h3>Compostos bioativos</h3><p>O alho contém compostos sulfurados, como a alicina, formados quando o dente é cortado ou triturado.</p></article>
+          <article class="benefit-card"><span>❤️</span><h3>Saúde cardiovascular</h3><p>O consumo regular de alho como parte de uma alimentação equilibrada é estudado por sua possível relação com alguns marcadores cardiovasculares.</p></article>
+          <article class="benefit-card"><span>🛡️</span><h3>Compostos antioxidantes</h3><p>O alho fornece substâncias bioativas que participam de mecanismos antioxidantes do organismo.</p></article>
+          <article class="benefit-card"><span>🥗</span><h3>Mais sabor, menos complicação</h3><p>As diferentes apresentações facilitam o preparo e ajudam a incorporar sabor às refeições do cotidiano.</p></article>
+        </div>
+        <div class="health-note"><strong>Importante:</strong> estas informações são educativas e não substituem orientação médica ou nutricional. Benefícios dependem do padrão alimentar e do contexto individual.</div>
+      </div>
+    </section>
+
+    <section id="curiosidades" class="section">
+      <div class="container curiosity-grid">
+        <div>
+          <span class="eyebrow purple">VOCÊ SABIA?</span>
+          <h2>Curiosidades sobre o alho</h2>
+          <div class="accordion">
+            <button class="accordion-btn">Por que o alho tem aroma tão marcante? <span>+</span></button>
+            <div class="accordion-content"><p>Quando o alho é cortado, amassado ou triturado, ocorre uma reação que produz compostos sulfurados responsáveis por parte do aroma e do sabor característicos.</p></div>
+            <button class="accordion-btn">Alho inteiro e alho triturado são iguais? <span>+</span></button>
+            <div class="accordion-content"><p>São diferentes apresentações do mesmo ingrediente. O alho triturado oferece praticidade e pode ser incorporado rapidamente a molhos, carnes, arroz, massas e outros preparos.</p></div>
+            <button class="accordion-btn">Como usar o alho na cozinha? <span>+</span></button>
+            <div class="accordion-content"><p>Ele pode ser usado em refogados, carnes, massas, molhos, arroz, feijão, legumes, sopas e diversos temperos. A intensidade varia conforme a quantidade e o modo de preparo.</p></div>
+          </div>
+        </div>
+        <img class="curiosity-photo" src="assets/alho-triturado.jpg" alt="Potes de alho triturado Alho Maringá">
+      </div>
+    </section>
+
+    <section id="receitas" class="section recipes">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="eyebrow gold">INSPIRAÇÃO</span>
+          <h2>Pratos que combinam com alho</h2>
+          <p>O alho pode acompanhar preparos simples ou sofisticados. Use a criatividade!</p>
+        </div>
+        <div class="recipe-grid">
+          <article class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80" alt="Massa com molho">
+            <div><h3>Massas e molhos</h3><p>Base clássica para refogados, molhos e massas.</p></div>
+          </article>
+          <article class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Carne grelhada">
+            <div><h3>Carnes grelhadas</h3><p>Excelente para marinadas, temperos e finalizações.</p></div>
+          </article>
+          <article class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80" alt="Pizza">
+            <div><h3>Pizzas e lanches</h3><p>Uma combinação saborosa para massas e recheios.</p></div>
+          </article>
+          <article class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" alt="Sopa">
+            <div><h3>Sopas e caldos</h3><p>Ajuda a construir aroma e sabor desde o início do preparo.</p></div>
+          </article>
+        </div>
+        <small class="photo-credit">Fotos de pratos: imagens externas carregadas do Unsplash. Para uma versão 100% local, substitua por fotografias autorizadas da empresa.</small>
+      </div>
+    </section>
+
+    <section id="cadastro" class="section contact-section">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow gold">FALE CONOSCO</span>
+          <h2>Cadastre-se para entrar em contato com a Alho Zani.</h2>
+          <p>Preencha seus dados e informe o que você procura. O site prepara a mensagem para envio pelo WhatsApp da empresa.</p>
+          <div class="contact-highlight">
+            <strong>(43) 99980-8756</strong>
+            <span>Atendimento Alho Zani</span>
+          </div>
+          <a class="btn btn-gold" href="mailto:alho_arapongas@hotmail.com">Enviar e-mail</a>
+        </div>
+
+        <form id="clientForm" class="client-form">
+          <div class="form-row">
+            <label>Nome completo<input name="nome" required maxlength="100" autocomplete="name"></label>
+            <label>Empresa / comércio<input name="empresa" maxlength="100" autocomplete="organization"></label>
+          </div>
+          <div class="form-row">
+            <label>E-mail<input type="email" name="email" required maxlength="120" autocomplete="email"></label>
+            <label>Telefone / WhatsApp<input name="telefone" required maxlength="20" autocomplete="tel"></label>
+          </div>
+          <div class="form-row">
+            <label>Cidade<input name="cidade" required maxlength="80" value="Arapongas-PR"></label>
+            <label>Interesse
+              <select name="interesse">
+                <option>Compra para consumo</option>
+                <option>Mercado / varejo</option>
+                <option>Restaurante / alimentação</option>
+                <option>Distribuição / revenda</option>
+                <option>Outros</option>
+              </select>
+            </label>
+          </div>
+          <label>Mensagem<textarea name="mensagem" rows="4" maxlength="500" placeholder="Conte brevemente como podemos ajudar."></textarea></label>
+          <label class="check"><input type="checkbox" required name="consentimento"> Autorizo o uso dos dados informados para retorno deste contato.</label>
+          <button class="btn btn-purple" type="submit">Preparar mensagem no WhatsApp</button>
+          <p id="formStatus" class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand"><span class="brand-mark">AZ</span><strong>Alho Zani</strong></div>
+        <p>Alho Maringá • Alho Zani • Alho Arapongas</p>
+      </div>
+      <div>
+        <strong>Contato</strong>
+        <p>Rua Realejo, nº 302 — Conjunto Centauro<br>Arapongas-PR • 86709-230</p>
+      </div>
+      <div>
+        <strong>Fale com a gente</strong>
+        <p><a href="tel:+5543999808756">(43) 99980-8756</a><br><a href="mailto:alho_arapongas@hotmail.com">alho_arapongas@hotmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> Alho Zani. Site institucional. Desenvolvido para apresentação digital da empresa.</div>
+  </footer>
+
+  <div id="productModal" class="modal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fechar">×</button>
+      <img id="modalImage" src="" alt="">
+      <div class="modal-body">
+        <span id="modalCategory" class="tag"></span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalText"></p>
+        <a class="btn btn-gold" href="#cadastro" id="modalContact">Tenho interesse</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
